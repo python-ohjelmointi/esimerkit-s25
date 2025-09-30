@@ -1,12 +1,8 @@
 
 def muotoile_paiva(paivamaara: str):
-    vuosi = paivamaara[0:4]
-    kuukausi = paivamaara[5:7]
-    paiva = paivamaara[8:]
+    vuosi, kuukausi, paiva = paivamaara.split("-")
 
-    muotoiltu = f"{int(paiva)}.{int(kuukausi)}.{int(vuosi)}"
-
-    return muotoiltu
+    return f"{int(paiva)}.{int(kuukausi)}.{int(vuosi)}"
 
 print(muotoile_paiva("2025-09-30"))
 print(muotoile_paiva("2025-12-24"))
